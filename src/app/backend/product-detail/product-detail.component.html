@@ -1,0 +1,21 @@
+<h3 style="color:blue">Product Detail</h3>
+<table class="table table-bordered" style="width: 60%; margin: 100px 0 0 300px">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Image</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{product.id}}</td>
+            <td><img style="width:100px" class="card-img-top" [src]="product.img" alt=""></td>
+            <td>{{product.name}}</td>
+            <td>${{product.price}}</td>
+            <td>{{product.desc}}</td>
+        </tr>
+    </tbody>
+</table>

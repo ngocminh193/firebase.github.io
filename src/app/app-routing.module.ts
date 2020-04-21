@@ -5,6 +5,9 @@ import { AdminComponent } from './backend/admin/admin.component';
 import { DashboardComponent } from './backend/dashboard/dashboard.component';
 import { ProductManagerComponent } from './backend/product-manager/product-manager.component';
 import { ShopComponent } from './cliend/shop/shop.component';
+import { ProductAddComponent } from './backend/product-add/product-add.component';
+import { ProductEditComponent } from './backend/product-edit/product-edit.component';
+import { ProductDetailComponent } from './backend/product-detail/product-detail.component';
 
 
 const routes: Routes = [
@@ -15,7 +18,10 @@ const routes: Routes = [
 children: [
   {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   { path: 'dashboard', component:DashboardComponent},
-  {path: 'product', component:ProductManagerComponent}
+  { path: 'product', component:ProductManagerComponent},
+  { path: 'product/edit/:productID', component: ProductEditComponent},
+  { path: 'product/add', component: ProductAddComponent}, 
+  { path: 'product/detail/:productID', component: ProductDetailComponent},
 ]}
 ];
 
